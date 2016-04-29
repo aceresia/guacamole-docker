@@ -36,7 +36,7 @@ ENV \
 
 # Add configuration scripts
 COPY bin /opt/guacamole/bin/
-
+COPY logback.xml /opt/guacamole/
 # Download and install latest guacamole-client and authentication
 RUN \
     /opt/guacamole/bin/download-guacamole.sh "$GUAC_VERSION" /usr/local/tomcat/webapps && \
